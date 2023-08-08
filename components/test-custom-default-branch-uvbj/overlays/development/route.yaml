@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-custom-default-branch-uvbj
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-custom-default-branch-uvbj
+    app.kubernetes.io/part-of: build-suite-test-application-kczy
+  name: test-custom-default-branctpql
+spec:
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: test-custom-default-branch-uvbj
+    weight: 100
+status: {}

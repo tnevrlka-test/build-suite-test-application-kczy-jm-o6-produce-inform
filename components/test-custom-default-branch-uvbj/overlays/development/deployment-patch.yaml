@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-custom-default-branch-uvbj
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/tnevrlka-test/build-e2e-rorf-tenant/build-suite-test-application-kczy/test-custom-default-branch-uvbj@sha256:bc472fba32b626809f02c45e6e9b0268ba1cc399c0f8451236016f9645030e0b
+        name: my-nginx
+        resources: {}
+status: {}
